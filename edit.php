@@ -14,7 +14,13 @@
         cursor: text;
     }
     input[type="text"] {
+        border: none;
+        background: transparent;
         resize: both;
+    }
+    input[type="text"]:hover {
+        border: 1px solid black;
+        background: white;
     }
     textarea {
         width: 40%;
@@ -99,7 +105,7 @@ for ($i=$start; $i<$start+$count; $i++)
 <form action="export.php" method="post" enctype="multipart/form-data">
     Text to be inserted:
     <br/>
-    <textarea readonly="true" id="json"></textarea>
+    <textarea readonly="true" id="json" name="json"></textarea>
     <br/>
     <input type="submit" value="Insert now"/>
 </form>
